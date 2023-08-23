@@ -9,7 +9,6 @@ metadata:
     app.kubernetes.io/name: devfile-sample-python-basic-p43n
     app.kubernetes.io/part-of: test-app-72
   name: devfile-sample-python-basic-p43n
-  namespace: lpardo-tenant
 spec:
   replicas: 1
   revisionHistoryLimit: 0
@@ -26,7 +25,7 @@ spec:
         app.kubernetes.io/instance: devfile-sample-python-basic-p43n
     spec:
       containers:
-      - image: python-image:latest
+      - image: quay.io/redhat-user-workloads-stage/lpardo-tenant/test-app-72/devfile-sample-python-basic-p43n@sha256:6f2ada380e273c669c6ee3d877a611c6609cd58560634aa5aa6baf0aa03a8054
         name: my-python
         ports:
         - containerPort: 8081
